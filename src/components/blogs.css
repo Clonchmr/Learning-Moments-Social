@@ -1,94 +1,90 @@
 body {
-    background-color: #e5e5e5;
-    color: #333333;
+  background-color: #e5e5e5;
+  color: #333333;
 }
 
 .all-posts-container {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .post {
-    border: 2px solid #E28743;
-    border-radius: 2rem;;
-    padding: 2rem 1rem;
-    width: 30%;
-    background-color: #eeb78e;
-   
+  border: 2px solid #e28743;
+  border-radius: 2rem;
+  padding: 2rem 1rem;
+  width: 30%;
+  background-color: #eeb78e;
 }
 
 .posts-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 3rem;
-    
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 3rem;
 }
 
 .header-choices {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .topic-likes {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 1.4rem 0 2.6rem 0;
-    font-size: 0.7rem;
-    
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.4rem 0 2.6rem 0;
+  font-size: 0.7rem;
 }
 
 .post-title {
-    font-weight: bold;
-    border: 1px solid black;
-    border-radius: 2rem;
-    width: max-content;
-    margin: 0 auto;
-   
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 2rem;
+  width: max-content;
+  margin: 0 auto;
 }
 
 .blog-body {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .interior-borders {
-    border: 1px solid #E28743;
-    border-radius: 2rem;
-    padding: 0.4rem 1.2rem;
-    background-color: white;
+  border: 1px solid #e28743;
+  border-radius: 2rem;
+  padding: 0.4rem 1.2rem;
+  background-color: white;
 }
 
 .navbar .interior-borders {
-    width: max-content;
+  width: max-content;
 }
 
 .navbar .interior-borders:hover {
-    background-color: #E28743;
-    border: 1px solid white;
-    border-radius: 2rem;
+  background-color: #e28743;
+  border: 1px solid white;
+  border-radius: 2rem;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-around;
-    border-bottom: 1px solid #E28743;
-    padding: 1rem;
-    margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #e28743;
+  padding: 1rem;
+  margin-bottom: 2rem;
 }
 
 .navbar button {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #333333;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #333333;
 }
 
 .header_choices {
-    border: 1px solid #E28743;
-    border-radius: 0.5rem;
-    margin-bottom: 2rem;
-    padding: 0.3rem;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #333333;
+  border: 1px solid #e28743;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 0.3rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #333333;
 }
 
-.header-choices:focus {
-    border: 1px solid #E28743;
+.header_choices:focus {
+  border: 1px solid #e28743;
 }
