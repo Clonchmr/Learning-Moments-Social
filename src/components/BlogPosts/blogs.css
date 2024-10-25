@@ -7,12 +7,17 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.post {
+.post,
+.post-container {
   border: 2px solid #e28743;
   border-radius: 2rem;
   padding: 2rem 1rem;
   width: 30%;
   background-color: #eeb78e;
+}
+
+.post-container {
+  margin: 6rem auto 0 auto;
 }
 
 .posts-container {
@@ -44,6 +49,10 @@ body {
 
 .blog-body {
   font-size: 0.9rem;
+}
+
+.blog-date {
+  width: max-content;
 }
 
 .interior-borders {
@@ -82,4 +91,25 @@ body {
 
 .header_choices:focus {
   border: 1px solid #e28743;
+}
+
+.post-footer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  margin-top: 4rem;
+}
+
+.edit-btn,
+.like-btn {
+  border-radius: 0.6rem;
+  color: white;
+}
+
+.edit-btn {
+  background-color: #575757;
+}
+
+.like-btn {
+  background-color: rgb(206, 82, 10);
 }

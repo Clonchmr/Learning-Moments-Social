@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { getAllBlogs } from "../../services/allBlogs";
+import { getAllBlogs } from "../../services/blogServices";
 import { BlogPost } from "./BlogPost";
 import "./blogs.css";
 import { NavBar } from "../navBar/NavBar";
@@ -40,9 +40,6 @@ export const AllBlogs = () => {
 
   return (
     <div className="all-posts-container">
-      <div>
-        <NavBar />
-      </div>
       <div className="header-choices">
         <div className="search-bar">
           <input

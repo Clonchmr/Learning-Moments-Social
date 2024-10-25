@@ -1,6 +1,8 @@
-import { Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import { AllBlogs } from "../components/BlogPosts/AllBlogs";
 import { useEffect, useState } from "react";
+import { PostDetails } from "../components/BlogPosts/PostDetails";
+import { NavBar } from "../components/navBar/NavBar";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -13,8 +15,20 @@ export const ApplicationViews = () => {
 
   return (
     <Routes>
-      <Route path="/">
+      <Route
+        path="/"
+        element={
+          <>
+            <NavBar />
+            <Outlet />
+          </>
+        }
+      >
         <Route index element={<AllBlogs />} />
+        <Route
+          path="post/:blogId"
+          element={<PostDetails currentUser={currentUser} />}
+        />
       </Route>
     </Routes>
   );
