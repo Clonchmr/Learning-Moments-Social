@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { getAllBlogs } from "../services/allBlogs";
+import { getAllBlogs } from "../../services/allBlogs";
 import { BlogPost } from "./BlogPost";
 import "./blogs.css";
-import { NavBar } from "./NavBar";
+import { NavBar } from "../navBar/NavBar";
 
 export const AllBlogs = () => {
   const [allBlogs, setAllBlogs] = useState([]);

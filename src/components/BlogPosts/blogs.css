@@ -71,11 +71,6 @@ body {
   margin-bottom: 2rem;
 }
 
-.navbar button {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: #333333;
-}
-
 .header_choices {
   border: 1px solid #e28743;
   border-radius: 0.5rem;
