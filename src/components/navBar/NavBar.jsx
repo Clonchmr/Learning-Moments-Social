@@ -10,7 +10,9 @@ export const NavBar = () => {
       </Link>
       <li className="navbar-items interior-borders">My Posts</li>
       <li className="navbar-items interior-borders">Favorites</li>
-      <li className="navbar-items interior-borders">New Post</li>
+      <Link to="/newpost">
+        <li className="navbar-items interior-borders">New Post</li>
+      </Link>
       <li className="navbar-items interior-borders">Profile</li>
       {localStorage.getItem("learning_user") ? (
         <li className="navbar-items interior-borders">

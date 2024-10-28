@@ -72,6 +72,12 @@ body {
   border-radius: 2rem;
 }
 
+.save-btn .interior-borders:hover {
+  background-color: #e28743;
+  border: 1px solid white;
+  border-radius: 2rem;
+}
+
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -112,4 +118,20 @@ body {
 
 .like-btn {
   background-color: rgb(206, 82, 10);
+}
+
+.title-topic {
+  display: flex;
+  justify-content: space-around;
+}
+
+.post-body {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  font-size: 1rem;
+}
+
+.save-btn {
+  margin: 1.5rem 0 0 0.4rem;
 }
