@@ -7,3 +7,12 @@ export const CreatePost = (newPost) => {
     body: JSON.stringify(newPost),
   }).then((res) => res.json());
 };
+
+export const DeletePost = (postId) => {
+  return fetch(`http://localhost:8088/posts/${postId}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then((res) => res.json());
+};

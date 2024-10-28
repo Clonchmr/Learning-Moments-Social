@@ -16,16 +16,21 @@ export const NewPost = ({ currentUser }) => {
     });
   }, []);
 
-  const handleNewPost = () => {
+  const date = new Date();
+  const todaysDate = `${date.getFullYear()}-${
+    date.getMonth() + 1
+  }-${date.getDate()}`;
+  const handleNewPost = (event) => {
+    event.preventDefault();
     const newPost = {
       userId: currentUser.id,
       topicId: parseInt(topic),
       title: title,
       body: body,
-      date: new Date(),
+      date: todaysDate,
     };
     CreatePost(newPost).then(() => {
-      navigate(`/`); //still need to work out navigation, and add in the prevent default so the button dosent refresh the page automatically
+      navigate(`/MyPosts`);
     });
   };
 
@@ -36,6 +41,7 @@ export const NewPost = ({ currentUser }) => {
           <input
             type="text"
             name="title"
+            maxLength="50"
             placeholder="Enter Title..."
             required
             className="title-input header_choices"

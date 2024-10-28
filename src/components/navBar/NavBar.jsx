@@ -8,9 +8,11 @@ export const NavBar = () => {
       <Link to="/">
         <li className="navbar-items interior-borders">All Posts</li>
       </Link>
-      <li className="navbar-items interior-borders">My Posts</li>
+      <Link to={"/MyPosts"}>
+        <li className="navbar-items interior-borders">My Posts</li>
+      </Link>
       <li className="navbar-items interior-borders">Favorites</li>
-      <Link to="/newpost">
+      <Link to="/NewPost">
         <li className="navbar-items interior-borders">New Post</li>
       </Link>
       <li className="navbar-items interior-borders">Profile</li>

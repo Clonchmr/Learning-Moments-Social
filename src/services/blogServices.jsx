@@ -9,3 +9,9 @@ export const getBlogById = (blogId) => {
     `http://localhost:8088/posts/?id=${blogId}&_embed=likes&_expand=topic&_expand=user`
   ).then((res) => res.json());
 };
+
+export const getBlogByUserId = (userId) => {
+  return fetch(`http://localhost:8088/posts?userId=${userId}`).then((res) =>
+    res.json()
+  );
+};
