@@ -7,3 +7,15 @@ export const AddNewLike = (post) => {
     body: JSON.stringify(post),
   }).then((res) => res.json());
 };
+
+export const getLikes = () => {
+  return fetch(`http://localhost:8088/likes?_expand=post`).then((res) =>
+    res.json()
+  );
+};
+
+export const deleteLike = (likeId) => {
+  return fetch(`http://localhost:8088/likes/${likeId}`, {
+    method: "DELETE",
+  });
+};

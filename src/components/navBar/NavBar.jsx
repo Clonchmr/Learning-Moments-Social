@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 
-export const NavBar = () => {
+export const NavBar = ({ currentUser }) => {
   const navigate = useNavigate;
 
   return (
@@ -11,11 +11,15 @@ export const NavBar = () => {
       <Link to={"/MyPosts"}>
         <li className="navbar-items interior-borders">My Posts</li>
       </Link>
-      <li className="navbar-items interior-borders">Favorites</li>
+      <Link to={"/Favorites"}>
+        <li className="navbar-items interior-borders">Favorites</li>
+      </Link>
       <Link to="/NewPost">
         <li className="navbar-items interior-borders">New Post</li>
       </Link>
-      <li className="navbar-items interior-borders">Profile</li>
+      <Link to={`/profile/${currentUser.id}`}>
+        <li className="navbar-items interior-borders">Profile</li>
+      </Link>
       {localStorage.getItem("learning_user") ? (
         <li className="navbar-items interior-borders">
           <Link

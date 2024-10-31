@@ -16,3 +16,13 @@ export const DeletePost = (postId) => {
     },
   }).then((res) => res.json());
 };
+
+export const UpdatePost = (postId, updatedPost) => {
+  return fetch(`http://localhost:8088/posts/${postId}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(updatedPost),
+  });
+};

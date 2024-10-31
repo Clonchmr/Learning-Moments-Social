@@ -156,10 +156,73 @@ body {
   margin-top: 8rem;
 }
 
-.delete-btn {
+.delete-btn,
+.remove-favorite-btn {
   margin: 0 0 0 0.5rem;
+  cursor: pointer;
 }
 
 .my-post-title:hover {
   text-shadow: 0 0 1px #e28743;
+  cursor: pointer;
+}
+.favorites-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0 2rem;
+}
+
+.favorites-container .favorite-item.interior-borders {
+  width: max-content;
+  padding: 1rem 1.5rem;
+}
+
+.remove-favorite-btn:hover,
+.edit-profile-btn:hover,
+.save-btn:hover {
+  background-color: #e28743;
+  color: #e5e5e5;
+  cursor: pointer;
+}
+.favorites-header {
+  font-size: 1.7rem;
+  margin: 0 0 2rem 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #e28743;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.user-profile {
+  margin: 0 auto;
+}
+
+.user-info,
+.user-footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.user-info {
+  margin-bottom: 2.4rem;
+}
+
+.edit-profile-btn {
+  border-radius: 0.6rem;
+  background-color: #e5e5e5;
+  cursor: pointer;
+}
+
+.profile-form {
+  display: flex;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.profile-input {
+  margin: 0 0.4rem;
 }

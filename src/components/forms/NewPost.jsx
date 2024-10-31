@@ -41,7 +41,7 @@ export const NewPost = ({ currentUser }) => {
           <input
             type="text"
             name="title"
-            maxLength="50"
+            maxLength="40"
             placeholder="Enter Title..."
             required
             className="title-input header_choices"

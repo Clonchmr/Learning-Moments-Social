@@ -3,8 +3,12 @@ import { AllBlogs } from "../components/BlogPosts/AllBlogs";
 import { useEffect, useState } from "react";
 import { PostDetails } from "../components/BlogPosts/PostDetails";
 import { NavBar } from "../components/navBar/NavBar";
-import { NewPost } from "../components/BlogPosts/NewPost";
+import { NewPost } from "../components/forms/NewPost";
 import { MyPosts } from "../components/BlogPosts/MyPosts";
+import { EditPost } from "../components/forms/EditPost";
+import { FavoritePosts } from "../components/BlogPosts/FavoritePosts";
+import { UserProfile } from "../components/profiles/UserProfile";
+import { EditProfile } from "../components/forms/EditProfile";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -21,7 +25,7 @@ export const ApplicationViews = () => {
         path="/"
         element={
           <>
-            <NavBar />
+            <NavBar currentUser={currentUser} />
             <Outlet />
           </>
         }
@@ -30,8 +34,28 @@ export const ApplicationViews = () => {
         <Route path="NewPost" element={<NewPost currentUser={currentUser} />} />
         <Route path="MyPosts" element={<MyPosts currentUser={currentUser} />} />
         <Route
+          path="Favorites"
+          element={<FavoritePosts currentUser={currentUser} />}
+        />
+        <Route path="profile">
+          <Route
+            path=":userId"
+            element={<UserProfile currentUser={currentUser} />}
+          />
+
+          <Route
+            path=":userId/edit"
+            element={<EditProfile currentUser={currentUser} />}
+          />
+        </Route>
+
+        <Route
           path="post/:blogId"
           element={<PostDetails currentUser={currentUser} />}
+        />
+        <Route
+          path="post/:blogId/edit"
+          element={<EditPost currentUser={currentUser} />}
         />
       </Route>
     </Routes>
